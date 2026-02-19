@@ -11,6 +11,7 @@ const roles = [
   "Backend Specialist",
   "Cloud Engineer",
   "Problem Solver",
+  "CP Enthusiast",
 ]
 
 export default function AnimatedRoles() {

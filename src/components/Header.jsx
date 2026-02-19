@@ -1,7 +1,6 @@
 import { useState } from "react";
 import CommandPalette from "./CommandPalette";
 import { Button } from "./ui/button";
-import { PulsatingButton } from "./ui/pulsating-button";
 
 const sections = ["about", "skills", "projects", "experience", "contact"];
 
@@ -28,7 +27,7 @@ export default function Header() {
           </div>
 
           <Button className="px-4 py-2 text-sm rounded-full border border-[#00f5d4] text-[#00f5d4] hover:bg-[#00f5d4] hover:text-black transition-all duration-300">
-            Hire Me →
+            Let's Talk →
           </Button>
         </div>
 
