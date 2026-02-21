@@ -6,6 +6,7 @@ import Hero from "./components/Hero";
 import LineBorder from "./components/LineBorder";
 import Project from "./components/Project";
 import SkillsSection from "./components/SkillSection";
+import EducationSection from "./components/EducationSection";
 
 export default function App() {
   useEffect(() => {
@@ -40,6 +41,7 @@ export default function App() {
           <Hero />
           <Project />
           <SkillsSection />
+          <EducationSection />
         </div>
       
     </div>

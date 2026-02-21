@@ -1,98 +1,106 @@
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const skills = [
   {
     title: "Frontend",
-    description: "Building responsive UI with React & Tailwind.",
+    description:
+      "Building elegant interfaces with React, motion systems, and atomic UX details.",
   },
   {
     title: "Backend",
-    description: "Scalable APIs with Node & Express.",
+    description:
+      "Designing resilient APIs with clear contracts, auth boundaries, and observability.",
   },
   {
     title: "C++ / DSA",
-    description: "Problem solving & algorithmic thinking.",
+    description:
+      "Engineering-first problem solving through strong algorithmic fundamentals.",
   },
   {
     title: "Database",
-    description: "MongoDB & data modeling.",
+    description:
+      "Crafting performant schemas and access patterns for predictable scale.",
   },
   {
     title: "System Design",
-    description: "Architecture thinking & scalability.",
+    description:
+      "Turning product requirements into architecture that balances speed and reliability.",
   },
   {
     title: "Cloud",
-    description: "Deployment & hosting knowledge.",
+    description:
+      "Shipping and operating production workloads with secure deployment workflows.",
   },
-]
+];
 
 export default function SkillsSection() {
-  const [active, setActive] = useState(skills[0])
+  const [active, setActive] = useState(skills[0]);
 
   return (
-    <section className="relative bg-gradient-to-b from-[#050b16] to-[#0b1f36] py-28 px-6 md:px-20">
+    <section className="relative overflow-hidden bg-[#081528] px-4 py-20 sm:px-6 md:px-20 md:py-28">
+      
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_15%,rgba(125,211,252,0.2),transparent_42%),radial-gradient(circle_at_85%_80%,rgba(129,140,248,0.22),transparent_45%)]" />
 
-      {/* Ambient Cyan Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,_rgba(34,211,238,0.08),_transparent_40%)]" />
+      <div className="relative z-10 mx-auto max-w-7xl rounded-[1.5rem] border border-indigo-200/20 bg-slate-950/45 p-5 shadow-[0_24px_70px_rgba(15,23,42,0.8)] backdrop-blur-xl sm:rounded-[2.2rem] sm:p-8 md:p-12">
+        
+        <div className="mb-10 text-center sm:mb-16">
+          <p className="inline-flex rounded-full border border-indigo-200/30 bg-indigo-400/10 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-indigo-100 sm:px-4 sm:text-xs sm:tracking-[0.24em]">
+            Expertise Matrix
+          </p>
 
-      <div className="relative z-10 max-w-7xl mx-auto">
-
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white">
-            Skills
+          <h2 className="mt-4 text-2xl font-semibold leading-tight text-white sm:mt-5 sm:text-4xl md:text-5xl">
+            Skills with a Product Engineering Lens
           </h2>
-          <p className="text-slate-400 mt-4">
-            Technologies & domains I work with
+
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-300 sm:mt-4 sm:text-base">
+            Built to deliver premium interfaces, maintainable systems, and reliable launches.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-20 items-center">
-
-          {/* LEFT — MACBOOK */}
+        <div className="grid items-start gap-10 md:grid-cols-2 md:gap-20">
+          
+          {/* LEFT — LAPTOP PREVIEW */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="relative"
+            className="relative order-2 md:order-1"
           >
-            {/* Laptop Shell */}
-            <div className="bg-slate-900/70 backdrop-blur-xl border border-cyan-400/10 rounded-2xl shadow-[0_0_40px_rgba(0,0,0,0.6)] p-3">
+            <div className="rounded-2xl border border-indigo-200/20 bg-slate-950/75 p-2.5 shadow-[0_0_0_1px_rgba(99,102,241,0.15)] sm:rounded-3xl sm:p-3">
+              
+              <div className="overflow-hidden rounded-xl border border-white/10 bg-[#010916] sm:rounded-2xl">
+                
+                <div className="flex items-center justify-between border-b border-white/10 bg-slate-900/85 px-3 py-2 sm:px-4">
+                  <div className="flex items-center gap-1.5 sm:gap-2">
+                    <div className="h-2.5 w-2.5 rounded-full bg-rose-400" />
+                    <div className="h-2.5 w-2.5 rounded-full bg-amber-300" />
+                    <div className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+                  </div>
 
-              {/* Screen */}
-              <div className="bg-black rounded-xl border border-white/5 overflow-hidden">
-
-                {/* macOS Bar */}
-                <div className="flex items-center gap-2 px-4 py-2 bg-slate-950">
-                  <div className="w-3 h-3 bg-red-500 rounded-full" />
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full" />
-                  <div className="w-3 h-3 bg-green-500 rounded-full" />
-                  <span className="text-xs text-slate-500 ml-3">
-                    preview.jsx
+                  <span className="text-[10px] tracking-wide text-slate-400 sm:text-[11px]">
+                    capability-preview.tsx
                   </span>
                 </div>
 
-                {/* Screen Content */}
-                <div className="bg-[#020617] p-10 min-h-[260px]">
+                <div className="min-h-[220px] p-5 sm:min-h-[250px] sm:p-7 md:min-h-[290px] md:p-10">
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={active.title}
-                      initial={{ opacity: 0, y: 10 }}
+                      initial={{ opacity: 0, y: 14 }}
                       animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.3 }}
+                      exit={{ opacity: 0, y: -14 }}
+                      transition={{ duration: 0.28 }}
                     >
-                      <div className="text-xs text-cyan-400 font-mono">
-                        &gt; {active.title}
-                      </div>
+                      <p className="font-mono text-[11px] text-indigo-300 sm:text-xs">
+                        &gt; focus_area = "{active.title}"
+                      </p>
 
-                      <h3 className="text-2xl font-semibold text-white mt-4">
+                      <h3 className="mt-3 text-2xl font-semibold text-white sm:mt-4 sm:text-3xl">
                         {active.title}
                       </h3>
 
-                      <p className="text-slate-400 mt-3 leading-relaxed">
+                      <p className="mt-3 text-sm leading-relaxed text-slate-300 sm:mt-4 sm:text-base">
                         {active.description}
                       </p>
                     </motion.div>
@@ -101,50 +109,51 @@ export default function SkillsSection() {
               </div>
             </div>
 
-            {/* Base / Keyboard Hint */}
-            <div className="mt-2 h-6 bg-slate-800 rounded-xl border border-white/5 shadow-inner" />
-            <div className="w-32 h-2 bg-slate-700 rounded-full mx-auto mt-1 opacity-50" />
-
-            {/* Neon Underglow */}
-            <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-40 h-10 bg-cyan-400/20 blur-2xl opacity-70" />
+            <div className="mt-3 h-4 rounded-xl border border-white/10 bg-slate-900/90 sm:h-5" />
+            <div className="mx-auto mt-1 h-1.5 w-24 rounded-full bg-slate-700/70 sm:w-28" />
           </motion.div>
 
           {/* RIGHT — SKILLS GRID */}
-          <div>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+          <div className="order-1 space-y-4 sm:space-y-6 md:order-2">
+            
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
               {skills.map((skill) => {
-                const isActive = active.title === skill.title
+                const isActive = active.title === skill.title;
 
                 return (
-                  <motion.div
+                  <motion.button
                     key={skill.title}
+                    type="button"
                     onMouseEnter={() => setActive(skill)}
-                    whileHover={{ scale: 1.05 }}
-                    className={`relative cursor-pointer rounded-xl px-4 py-5 text-sm font-medium text-center transition-all
-                      backdrop-blur-xl border
+                    onFocus={() => setActive(skill)}
+                    onClick={() => setActive(skill)}
+                    whileHover={{ scale: 1.04, y: -2 }}
+                    className={`rounded-xl border px-3 py-3 text-center text-xs font-medium transition-all sm:px-4 sm:py-4 sm:text-sm
                       ${
                         isActive
-                          ? "border-cyan-400/40 text-white bg-cyan-400/10 shadow-[0_0_18px_rgba(34,211,238,0.35)]"
-                          : "border-white/10 text-slate-300 bg-slate-900/40 hover:border-cyan-400/30 hover:text-white"
+                          ? "border-indigo-300/60 bg-indigo-300/15 text-white shadow-[0_0_24px_rgba(129,140,248,0.42)]"
+                          : "border-white/15 bg-slate-900/55 text-slate-200 hover:border-indigo-300/40 hover:text-white"
                       }`}
                   >
                     {skill.title}
-
-                    {isActive && (
-                      <motion.div
-                        layoutId="activeGlow"
-                        className="absolute inset-0 rounded-xl border border-cyan-400/50"
-                        transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                      />
-                    )}
-                  </motion.div>
-                )
+                  </motion.button>
+                );
               })}
             </div>
-          </div>
 
+            <div className="rounded-2xl border border-white/10 bg-slate-900/60 p-4 sm:p-5">
+              <p className="text-[10px] uppercase tracking-[0.18em] text-indigo-200 sm:text-xs sm:tracking-[0.2em]">
+                Delivery Standard
+              </p>
+
+              <p className="mt-2 text-xs leading-relaxed text-slate-300 sm:mt-3 sm:text-sm">
+                Every capability is aligned to one outcome: premium UX, engineering depth, and launch-ready execution.
+              </p>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -5,7 +5,7 @@ import LineBorder from "./LineBorder";
 export default function Hero() {
   return (
     <>
-    <section className="flex items-center justify-between p-16 ">
+    <section className="flex items-center justify-between p-16 pt-0 ">
       {/* Left Side */}
       <div className="max-w-xl text-white font-mono pl-20">
         <h1 className="text-5xl font-bold mb-4">Mohammed Faijan</h1>

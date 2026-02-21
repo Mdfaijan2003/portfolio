@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <>
       {/* ================= DESKTOP HEADER ================= */}
-      <div className="hidden md:block fixed top-0 left-0 w-full z-50 font-mono ">
+      <div className="hidden md:block top-0 left-0 w-full z-50 font-mono ">
         {/* Top Terminal Bar */}
         <div className="flex justify-between items-center pr-10">
           <div className="flex items-center gap-6 px-8 py-4 bg-[#081826]/80 backdrop-blur-md">
@@ -26,7 +26,7 @@ export default function Header() {
             </div>
           </div>
 
-          <Button className="px-4 py-2 text-sm rounded-full border border-[#00f5d4] text-[#00f5d4] hover:bg-[#00f5d4] hover:text-black transition-all duration-300">
+          <Button className="px-4 py-2 text-sm  rounded-full border border-[#00f5d4] text-[#00f5d4] hover:bg-[#00f5d4] hover:text-black transition-all duration-300">
             Let's Talk →
           </Button>
         </div>
