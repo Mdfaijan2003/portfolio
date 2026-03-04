@@ -7,6 +7,9 @@ import LineBorder from "./components/LineBorder";
 import Project from "./components/Project";
 import SkillsSection from "./components/SkillSection";
 import EducationSection from "./components/EducationSection";
+import { Contact } from "lucide-react";
+import ContactSection from "./components/ContactSection";
+import Footer from "./components/Footer";
 
 export default function App() {
   useEffect(() => {
@@ -42,6 +45,12 @@ export default function App() {
           <Project />
           <SkillsSection />
           <EducationSection />
+          <ContactSection />
+        </div>
+
+        <div className="relative z-10">
+          {/* Your sections will go here */}
+          <Footer />
         </div>
       
     </div>
