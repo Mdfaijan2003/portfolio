@@ -10,6 +10,7 @@ import EducationSection from "./components/EducationSection";
 import { Contact } from "lucide-react";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
+import AboutSection from "./components/AboutSection";
 
 export default function App() {
   useEffect(() => {
@@ -42,6 +43,7 @@ export default function App() {
         <div className="relative z-10 pt-[100px]">
           {/* Your sections will go here */}
           <Hero />
+          <AboutSection />
           <Project />
           <SkillsSection />
           <EducationSection />

@@ -108,7 +108,7 @@ const projects = [
       "Built a full booking lifecycle with live slot inventory, secure checkout flows, and operational dashboards.",
     impact: "42% faster booking completion",
     stack: ["React", "Node.js", "MongoDB", "Razorpay"],
-    tone: "from-cyan-400/25 via-sky-500/10 to-transparent",
+    tone: "from-cyan-300/25 via-teal-300/10 to-transparent",
   },
   {
     title: "Scalable Backend Architecture",
@@ -118,7 +118,7 @@ const projects = [
       "Engineered a modular Express architecture with layered services, auth boundaries, and deployment-ready observability.",
     impact: "99.9% API uptime target",
     stack: ["Node.js", "Express", "Redis", "Docker"],
-    tone: "from-indigo-400/25 via-blue-500/10 to-transparent",
+     tone: "from-cyan-400/20 via-sky-300/10 to-transparent",
   },
   {
     title: "DSA Performance Tracker",
@@ -128,22 +128,22 @@ const projects = [
       "Designed a focused analytics UI to monitor problem-solving consistency, topic heatmaps, and streak intelligence.",
     impact: "3x more weekly practice consistency",
     stack: ["React", "Tailwind", "Charts", "Firebase"],
-    tone: "from-violet-400/25 via-fuchsia-500/10 to-transparent",
+    tone: "from-teal-300/20 via-cyan-300/10 to-transparent",
   },
 ];
 
 export default function Project() {
   return (
-    <section className="relative overflow-hidden bg-[#030a14] px-6 py-24 md:px-20 md:py-32">
+    <section className="relative overflow-hidden bg-[#040b18] px-6 py-24 md:px-20 md:py-32">
       
       {/* Background Glow */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(56,189,248,0.14),transparent_40%),radial-gradient(circle_at_85%_80%,rgba(99,102,241,0.2),transparent_46%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(56,189,248,0.14),transparent_40%),radial-gradient(circle_at_85%_80%,rgba(45,212,191,0.16),transparent_46%)]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
         
         {/* Section Header */}
         <div className="mb-14 md:mb-16">
-          <p className="inline-flex rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-1 text-xs uppercase tracking-[0.25em] text-cyan-100">
+          <p className="inline-flex rounded-full border border-cyan-200/35 bg-cyan-300/10 px-4 py-1 text-xs uppercase tracking-[0.25em] text-cyan-100">
             Case Studies
           </p>
 

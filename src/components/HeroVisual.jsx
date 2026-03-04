@@ -15,15 +15,8 @@ import gcp from "@/assets/gcp-svgrepo-com.svg";
 import github from "@/assets/github-svgrepo-com.svg";
 import hcp from "@/assets/hcp-svgrepo-com.svg";
 import linkedin from "@/assets/linkedin-svgrepo-com.svg";
+
 const techIcons = [
-  nodedotjs,
-  mongodb,
-  react,
-  amazonaws,
-  docker,
-  git,
-  nextdotjs,
-  tailwindcss,
   nodedotjs,
   mongodb,
   react,
@@ -34,7 +27,6 @@ const techIcons = [
   tailwindcss,
   codepen,
   digitalOcean,
-  docker,
   figma,
   gcp,
   github,
@@ -44,20 +36,27 @@ const techIcons = [
 
 export default function HeroVisual() {
   return (
-    <div className="relative z-20 w-[460px] h-[550px] object-cover animate-[float_6s_ease-in-out_infinite]">
-      <div className="absolute inset-0 z-10 flex items-center justify-center opacity-60 scale-110 mix-blend-screen">
+    <div className="relative z-20 h-[560px] w-[440px] animate-[float_6s_ease-in-out_infinite]">
+      <div className="absolute -right-16 top-10 h-52 w-52 rounded-full bg-cyan-300/20 blur-[80px]" />
+      <div className="absolute -left-12 bottom-6 h-40 w-40 rounded-full bg-teal-300/15 blur-[80px]" />
+
+      <div className="absolute inset-0 z-10 flex scale-110 items-center justify-center opacity-60 mix-blend-screen">
         <IconCloud images={techIcons} />
       </div>
 
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-175 h-175 bg-[#00f5d4]/10 blur-[160px] rounded-full" />
+      <div className="hero-image-frame relative z-20 h-full w-full overflow-hidden rounded-[2rem] border border-cyan-200/30 bg-slate-950/55 p-2.5 shadow-[0_20px_80px_rgba(2,8,23,0.75)] backdrop-blur-lg">
+        <div className="relative h-full w-full overflow-hidden rounded-[1.6rem] border border-white/10 bg-[radial-gradient(circle_at_20%_10%,rgba(45,212,191,0.22),transparent_35%),#061120]">
+          <img
+            src={myImage}
+            alt="Mohammed Faijan"
+            className="relative z-10 h-full w-full object-cover object-top opacity-95 saturate-110"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,10,20,0)_35%,rgba(3,10,20,0.85)_100%)]" />
+          <div className="absolute inset-x-8 bottom-3 h-8 rounded-full bg-black/35 blur-2xl" />
+        </div>
+      </div>
 
-      <img
-        src={myImage}
-        alt="Mohammed Faijan"
-        className="relative z-5 w-[460px] h-[550px] object-cover opacity-80"
-      />
-      <div className="absolute inset-0 bg-gradient-radial from-transparent via-[#041f2a]/40 to-[#020617] pointer-events-none" />
-      <div className="absolute bottom-4 right-20 w-64 h-10 bg-black/40 blur-2xl rounded-full" />
+      <div className="pointer-events-none absolute inset-0 rounded-[2rem] border border-cyan-200/25" />
     </div>
   );
 }

@@ -3,16 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const skills = [
   {
-    title: "Frontend",
-    description:
-      "Building elegant interfaces with React, motion systems, and atomic UX details.",
-  },
-  {
-    title: "Backend",
-    description:
-      "Designing resilient APIs with clear contracts, auth boundaries, and observability.",
-  },
-  {
     title: "C++ / DSA",
     description:
       "Engineering-first problem solving through strong algorithmic fundamentals.",
@@ -38,14 +28,14 @@ export default function SkillsSection() {
   const [active, setActive] = useState(skills[0]);
 
   return (
-    <section className="relative overflow-hidden bg-[#081528] px-4 py-20 sm:px-6 md:px-20 md:py-28">
+    <section className="relative overflow-hidden bg-[#061120] px-4 py-20 sm:px-6 md:px-20 md:py-28">
       
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_15%,rgba(125,211,252,0.2),transparent_42%),radial-gradient(circle_at_85%_80%,rgba(129,140,248,0.22),transparent_45%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_15%,rgba(125,211,252,0.2),transparent_42%),radial-gradient(circle_at_85%_80%,rgba(45,212,191,0.18),transparent_45%)]" />
 
-      <div className="relative z-10 mx-auto max-w-7xl rounded-[1.5rem] border border-indigo-200/20 bg-slate-950/45 p-5 shadow-[0_24px_70px_rgba(15,23,42,0.8)] backdrop-blur-xl sm:rounded-[2.2rem] sm:p-8 md:p-12">
+      <div className="relative z-10 mx-auto max-w-7xl rounded-[1.5rem] border border-cyan-200/20 bg-slate-950/45 p-5 shadow-[0_24px_70px_rgba(15,23,42,0.8)] backdrop-blur-xl sm:rounded-[2.2rem] sm:p-8 md:p-12">
         
         <div className="mb-10 text-center sm:mb-16">
-          <p className="inline-flex rounded-full border border-indigo-200/30 bg-indigo-400/10 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-indigo-100 sm:px-4 sm:text-xs sm:tracking-[0.24em]">
+          <p className="inline-flex rounded-full border border-cyan-200/30 bg-cyan-300/10 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-cyan-100 sm:px-4 sm:text-xs sm:tracking-[0.24em]">
             Expertise Matrix
           </p>
 
@@ -67,7 +57,7 @@ export default function SkillsSection() {
             transition={{ duration: 0.6 }}
             className="relative order-2 md:order-1"
           >
-            <div className="rounded-2xl border border-indigo-200/20 bg-slate-950/75 p-2.5 shadow-[0_0_0_1px_rgba(99,102,241,0.15)] sm:rounded-3xl sm:p-3">
+            <div className="rounded-2xl border border-cyan-200/20 bg-slate-950/75 p-2.5 shadow-[0_0_0_1px_rgba(34,211,238,0.2)] sm:rounded-3xl sm:p-3">
               
               <div className="overflow-hidden rounded-xl border border-white/10 bg-[#010916] sm:rounded-2xl">
                 
@@ -92,7 +82,7 @@ export default function SkillsSection() {
                       exit={{ opacity: 0, y: -14 }}
                       transition={{ duration: 0.28 }}
                     >
-                      <p className="font-mono text-[11px] text-indigo-300 sm:text-xs">
+                      <p className="font-mono text-[11px] text-cyan-300 sm:text-xs">
                         &gt; focus_area = "{active.title}"
                       </p>
 
@@ -131,8 +121,8 @@ export default function SkillsSection() {
                     className={`rounded-xl border px-3 py-3 text-center text-xs font-medium transition-all sm:px-4 sm:py-4 sm:text-sm
                       ${
                         isActive
-                          ? "border-indigo-300/60 bg-indigo-300/15 text-white shadow-[0_0_24px_rgba(129,140,248,0.42)]"
-                          : "border-white/15 bg-slate-900/55 text-slate-200 hover:border-indigo-300/40 hover:text-white"
+                          ? "border-cyan-300/60 bg-cyan-300/15 text-white shadow-[0_0_24px_rgba(45,212,191,0.35)]"
+                          : "border-white/15 bg-slate-900/55 text-slate-200 hover:border-cyan-300/40 hover:text-white"
                       }`}
                   >
                     {skill.title}
@@ -142,7 +132,7 @@ export default function SkillsSection() {
             </div>
 
             <div className="rounded-2xl border border-white/10 bg-slate-900/60 p-4 sm:p-5">
-              <p className="text-[10px] uppercase tracking-[0.18em] text-indigo-200 sm:text-xs sm:tracking-[0.2em]">
+              <p className="text-[10px] uppercase tracking-[0.18em] text-cyan-100 sm:text-xs sm:tracking-[0.2em]">
                 Delivery Standard
               </p>
 

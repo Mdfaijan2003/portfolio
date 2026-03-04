@@ -26,7 +26,7 @@ export default function AnimatedRoles() {
   }, [])
 
   return (
-    <div className="text-2xl md:text-3xl font-mono text-[#00f5d4] mt-2">
+    <div className="text-2xl md:text-3xl font-mono text-cyan-300 mt-2">
       <TypingAnimation
         key={roles[index]}
         duration={60}
