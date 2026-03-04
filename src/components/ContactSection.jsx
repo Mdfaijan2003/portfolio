@@ -20,7 +20,7 @@ const ContactSection = () => {
 
   return (
     <section
-      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#050d1a] px-4 py-20 font-sans sm:px-6 lg:px-8"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-transparent px-4 py-20 font-sans sm:px-6 lg:px-8"
       id="contact"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_15%,rgba(34,211,238,0.18),transparent_42%),radial-gradient(circle_at_85%_80%,rgba(45,212,191,0.14),transparent_45%)]" />

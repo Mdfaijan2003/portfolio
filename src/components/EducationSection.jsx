@@ -256,7 +256,7 @@ export default function EducationSection() {
   return (
     <section
       ref={containerRef}
-      className="relative bg-[#040b18] py-24 px-8 md:px-24 overflow-hidden"
+      className="relative bg-transparent py-24 px-8 md:px-24 overflow-hidden"
     >
       {/* Background Tone Shift */}
       <motion.div
@@ -285,6 +285,7 @@ export default function EducationSection() {
 
           {/* LEFT NAVIGATION RAIL */}
           <div className="space-y-10">
+
             {categories.map((cat) => {
               const isActive = activeCategory === cat
 
@@ -292,18 +293,18 @@ export default function EducationSection() {
                 <div key={cat}>
                   <button
                     onClick={() => handleCategoryChange(cat)}
-                    className="relative text-left group"
+                    className="relative text-left"
                   >
                     {isActive && (
                       <motion.div
                         layoutId="categoryIndicator"
-                        className="absolute -left-5 top-2 w-1 h-6 bg-cyan-300 rounded-full"
+                        className="absolute -left-5 top-2 w-1 h-6 bg-cyan-300 rounded"
                       />
                     )}
 
                     <h3
-                      className={`text-base font-semibold tracking-wide transition-colors duration-300 ${
-                        isActive ? "text-white" : "text-slate-500 group-hover:text-slate-300"
+                      className={`text-base font-semibold tracking-wide transition ${
+                        isActive ? "text-white" : "text-slate-500"
                       }`}
                     >
                       {cat}
@@ -311,32 +312,27 @@ export default function EducationSection() {
                   </button>
 
                   {isActive && (
-                    <motion.div 
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.3, delay: 0.1 }}
-                      className="mt-4 ml-4 space-y-2"
-                    >
+                    <div className="mt-4 ml-4 space-y-3">
                       {data[cat].map((item) => {
                         const activeSub = activeItem.id === item.id
                         return (
                           <button
                             key={item.id}
                             onClick={() => setActiveItem(item)}
-                            className="block text-sm relative text-left w-full group"
+                            className="block text-sm relative text-left"
                           >
                             {activeSub && (
                               <motion.div
                                 layoutId="subIndicator"
-                                className="absolute -left-4 top-1/2 -translate-y-1/2 w-2 h-2 bg-cyan-300 rounded-full"
+                                className="absolute -left-4 top-1.5 w-2 h-2 bg-cyan-300 rounded-full"
                               />
                             )}
 
                             <span
-                              className={`transition-colors duration-200 ${
+                              className={`transition ${
                                 activeSub
-                                  ? "text-white font-medium"
-                                  : "text-slate-500 group-hover:text-slate-300"
+                                  ? "text-white"
+                                  : "text-slate-500 hover:text-white"
                               }`}
                             >
                               {item.label}
@@ -344,7 +340,7 @@ export default function EducationSection() {
                           </button>
                         )
                       })}
-                    </motion.div>
+                    </div>
                   )}
                 </div>
               )
@@ -352,37 +348,29 @@ export default function EducationSection() {
           </div>
 
           {/* RIGHT CONTENT STAGE */}
-          <div className="relative min-h-[600px]">
+          <div className="relative">
+
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
+                exit={{ opacity: 0 }}
                 transition={{ duration: 0.4 }}
-                className="w-full"
               >
                 {/* Meta Info */}
                 <div className="mb-8">
-                  <h3 className="text-2xl font-semibold text-white leading-tight">
+                  <h3 className="text-2xl font-semibold text-white">
                     {activeItem.title}
                   </h3>
 
-                  <p className="text-cyan-300 mt-2 text-lg">
+                  <p className="text-cyan-300 mt-1">
                     {activeItem.institution}
                   </p>
 
-                  <div className="flex items-center gap-4 mt-1">
-                    <p className="text-slate-400">
-                      {activeItem.year}
-                    </p>
-                    {activeItem.score && (
-                      <>
-                        <span className="text-slate-600">•</span>
-                        <p className="text-slate-400">{activeItem.score}</p>
-                      </>
-                    )}
-                  </div>
+                  <p className="text-slate-400 mt-1">
+                    {activeItem.year}
+                  </p>
                 </div>
 
                 {/* PARALLAX CERTIFICATE */}
@@ -392,37 +380,26 @@ export default function EducationSection() {
                 >
                   <img
                     src={activeItem.image}
-                    alt={activeItem.title}
+                    alt="Certificate"
                     className="w-full h-[380px] object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#040b18]/60 via-transparent to-transparent" />
+
+                  <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent" />
                 </motion.div>
 
                 {/* Bullet Details */}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.2 }}
-                  className="mt-6"
-                >
-                  <p className="text-xs uppercase tracking-wider text-slate-500 mb-3">Key Highlights</p>
-                  <ul className="space-y-2 text-slate-300 text-sm">
-                    {activeItem.details.map((d, i) => (
-                      <motion.li 
-                        key={i} 
-                        initial={{ opacity: 0, x: -10 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.1 + (i * 0.05) }}
-                        className="flex gap-3"
-                      >
-                        <span className="w-1.5 h-1.5 bg-cyan-300 rounded-full mt-2 flex-shrink-0" />
-                        <span>{d}</span>
-                      </motion.li>
-                    ))}
-                  </ul>
-                </motion.div>
+                <ul className="mt-6 space-y-2 text-slate-400 text-sm">
+                  {activeItem.details.map((d, i) => (
+                    <li key={i} className="flex gap-3">
+                      <span className="w-2 h-2 bg-cyan-300 rounded-full mt-1.5" />
+                      {d}
+                    </li>
+                  ))}
+                </ul>
+
               </motion.div>
             </AnimatePresence>
+
           </div>
         </div>
       </div>
