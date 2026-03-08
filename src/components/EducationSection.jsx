@@ -186,7 +186,7 @@ const data = {
       institution: "SimpliLearn",
       year: "2024",
       details: ["Financial Statements", "Budgeting", "Investment Basics"],
-      image: "/certificates/finance.jpg",
+      image: "../assets/certificate introduction to basics of finanace.svg",
     },
     {
       id: 17,
@@ -195,7 +195,7 @@ const data = {
       institution: "Certification",
       year: "2024",
       details: ["Critical Analysis", "Problem Solving", "Decision Making"],
-      image: "/certificates/critical-thinking.jpg",
+      image: "../assets/Critical thinking udemy.svg",
     },
     {
       id: 18,
@@ -204,7 +204,7 @@ const data = {
       institution: "Certification",
       year: "2025",
       details: ["Digital Marketing", "SEO", "Content Marketing", "Social Media Strategy"],
-      image: "/certificates/digital-marketing.jpg",
+      image: "../assets/UC-40.5htr.svg",
     },
     {
       id: 19,
@@ -213,7 +213,7 @@ const data = {
       institution: "Certification",
       year: "2025",
       details: ["Accounting", "Bookkeeping", "Financial Reporting", "Payroll Management"],
-      image: "/certificates/quickbooks.jpg",
+      image: "../assets/UC-180.5hr.svg",
     },
     {
       id: 20,
@@ -222,7 +222,7 @@ const data = {
       institution: "Udemy",
       year: "2024",
       details: ["Business Strategy", "Startup Fundamentals", "Management Principles"],
-      image: "/certificates/entrepreneurship.jpg",
+      image: "../assets/udemy 3.5.svg",
     },
   ],
 }

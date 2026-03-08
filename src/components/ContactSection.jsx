@@ -84,11 +84,11 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <div className="mb-1 text-xs text-slate-500">Email</div>
-                    <div className="font-medium">hello@faijan.dev</div>
+                    <div className="font-medium">mdfaijancoder@gmail.com</div>
                   </div>
                 </a>
 
-                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer" className="group flex items-center gap-4 text-slate-300 transition-colors hover:text-white">
+                <a href="https://linkedin.com/in/md-faijan-b29052294/" target="_blank" rel="noreferrer" className="group flex items-center gap-4 text-slate-300 transition-colors hover:text-white">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-700/50 bg-slate-800/50 transition-all group-hover:border-cyan-300/50 group-hover:bg-cyan-300/10">
                     <Linkedin size={18} className="text-slate-400 transition-colors group-hover:text-cyan-300" />
                   </div>
@@ -98,7 +98,7 @@ const ContactSection = () => {
                   </div>
                 </a>
 
-                <a href="https://github.com/yourusername" target="_blank" rel="noreferrer" className="group flex items-center gap-4 text-slate-300 transition-colors hover:text-white">
+                <a href="https://github.com/Mdfaijan2003" target="_blank" rel="noreferrer" className="group flex items-center gap-4 text-slate-300 transition-colors hover:text-white">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-700/50 bg-slate-800/50 transition-all group-hover:border-cyan-300/50 group-hover:bg-cyan-300/10">
                     <Github size={18} className="text-slate-400 transition-colors group-hover:text-cyan-300" />
                   </div>
